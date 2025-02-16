@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/webappdb
+    username: postgres
+    password: mtuanvu1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+  api-docs:
+    path: /api
