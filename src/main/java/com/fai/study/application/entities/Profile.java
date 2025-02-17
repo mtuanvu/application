@@ -35,6 +35,7 @@ public class Profile extends DateTime {
     @Column(name = "bio")
     private String bio;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
+    @JoinColumn(name = "users_id", nullable = false, unique = true)
     private User user;
 }

@@ -2,11 +2,10 @@ package com.fai.study.application.dto.response.profile;
 
 import lombok.*;
 
-@Setter
-@Getter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class ProfileResponse {
     private String id;
     private String fullName;

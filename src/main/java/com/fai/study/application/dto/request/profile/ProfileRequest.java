@@ -2,11 +2,7 @@ package com.fai.study.application.dto.request.profile;
 
 import lombok.*;
 
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@Data
 public class ProfileRequest {
     private String fullName;
     private String dob;

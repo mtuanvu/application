@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ProfileService {
-    ProfileResponse createProfile(ProfileRequest request);
     List<ProfileResponse> getAllProfiles();
     ProfileResponse updateProfile(UUID id, ProfileRequest request);
     ProfileResponse getProfileById(UUID id);
-    void deleteProfile(UUID id);
 }

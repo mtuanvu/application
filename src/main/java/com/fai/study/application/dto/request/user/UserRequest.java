@@ -1,14 +1,12 @@
 package com.fai.study.application.dto.request.user;
 
+import com.fai.study.application.dto.request.profile.ProfileRequest;
 import lombok.*;
 
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@Data
 public class UserRequest {
     private String email;
     private String phoneNumber;
     private String password;
+    private ProfileRequest profile;
 }

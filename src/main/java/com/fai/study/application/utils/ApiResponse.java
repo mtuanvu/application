@@ -1,14 +1,24 @@
 package com.fai.study.application.utils;
 
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+import lombok.Builder;
 
-@Getter
-@Setter
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class ApiResponse <T> {
+public class ApiResponse<T> {
     private int code;
-    private String message;
+    private String error;
     private T data;
+
+    public ApiResponse(int code, String error, T data) {
+        this.code = code;
+        this.error = error;
+        this.data = data;
+    }
+
+    public ApiResponse() {
+    }
 }
